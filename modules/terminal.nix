@@ -29,6 +29,12 @@
     dotnetCorePackages.sdk_10_0
   ])
     uv
+    (google-cloud-sdk.withExtraComponents [
+    google-cloud-sdk.components.gke-gcloud-auth-plugin
+  ])
+    k9s
+    kubectl
+    dbeaver-bin
 
     pciutils
     mesa-demos
