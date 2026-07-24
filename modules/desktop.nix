@@ -6,9 +6,6 @@
     vscode
     kdePackages.kate
 
-    # Terminal
-    ghostty
-
     # API Client
     bruno
 
@@ -24,7 +21,11 @@
     #browsers
     google-chrome
 
-    openvpn
+    #dev
+    dbeaver-bin
+
+    #hardware
+    openrgb-with-all-plugins
 
   ];
 }

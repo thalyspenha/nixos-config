@@ -10,6 +10,7 @@
     zip
     unzip
     wl-clipboard
+    i2c-tools
 
     # Utilidades
     tree
@@ -19,6 +20,8 @@
     fd
     fzf
     fastfetch
+    lazydocker
+    openvpn
 
     # Editor
     vim
@@ -34,7 +37,6 @@
   ])
     k9s
     kubectl
-    dbeaver-bin
 
     pciutils
     mesa-demos

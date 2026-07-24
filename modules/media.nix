@@ -5,6 +5,4 @@
     ffmpeg
     libdvdcss
   ];
-
-  nixpkgs.config.allowUnfree = true;
 }

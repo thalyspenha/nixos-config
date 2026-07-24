@@ -15,6 +15,7 @@
       ./modules/desktop.nix
       ./modules/media.nix
       ./modules/graphics.nix
+      ./modules/hardware.nix
     ];
 
   # Bootloader.
@@ -111,26 +112,19 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
- nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
- home-manager = {
-  useGlobalPkgs = true;
-  useUserPackages = true;
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
 
-  users.thalys = import ./home.nix;
-};
-
-
-
+    users.thalys = import ./home.nix;
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #sytem
-  kdePackages.krdc
-  
   ];
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -158,15 +152,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
-
-
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-
-
-  #flatpak
-  services.flatpak.enable = true;
-
-
-
 }

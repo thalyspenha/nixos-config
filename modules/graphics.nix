@@ -10,7 +10,6 @@
       mesa
       libva
       libva-utils
-      mesa.drivers
     ];
   };
 }
