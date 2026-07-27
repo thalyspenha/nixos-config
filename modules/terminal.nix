@@ -27,10 +27,6 @@
     vim
 
      # Desenvolvimento
-    (dotnetCorePackages.combinePackages [
-    dotnetCorePackages.sdk_8_0
-    dotnetCorePackages.sdk_10_0
-  ])
     uv
     (google-cloud-sdk.withExtraComponents [
     google-cloud-sdk.components.gke-gcloud-auth-plugin
