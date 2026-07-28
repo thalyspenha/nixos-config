@@ -5,6 +5,7 @@
     ./home-modules/hyprland.nix
     ./home-modules/waybar.nix
     ./home-modules/rofi.nix
+    ./home-modules/lock-idle.nix
   ];
 
   home.username = "thalys";
