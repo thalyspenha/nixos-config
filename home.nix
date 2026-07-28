@@ -8,6 +8,7 @@
     ./home-modules/lock-idle.nix
     ./home-modules/notifications.nix
     ./home-modules/wallpaper.nix
+    ./home-modules/theme.nix
   ];
 
   home.username = "thalys";
