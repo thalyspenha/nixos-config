@@ -1,7 +1,7 @@
 # home-modules/wallpaper.nix
 { config, ... }:
 let
-  wallpaperPath = "${config.home.homeDirectory}/Pictures/wallpapers/wallpaper.jpg";
+  wallpaperPath = "${config.home.homeDirectory}/Pictures/wallpapers/wallpaper.png";
 in
 {
   services.hyprpaper = {
