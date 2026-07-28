@@ -45,6 +45,8 @@ let
   };
 in
 {
+  environment.systemPackages = [ theme ];
+
   services.displayManager.sddm = {
     theme = "sddm-astronaut-theme";
     extraPackages = [ theme ];

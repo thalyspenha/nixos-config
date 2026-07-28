@@ -24,8 +24,8 @@ in
 
       exec-once = [
         "waybar"
-        "swaync"
-        "hyprpaper"
+        "nm-applet --indicator"
+        "blueman-applet"
         "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
       ];
 
