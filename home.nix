@@ -4,6 +4,7 @@
   imports = [
     ./home-modules/hyprland.nix
     ./home-modules/waybar.nix
+    ./home-modules/rofi.nix
   ];
 
   home.username = "thalys";
