@@ -70,6 +70,13 @@
   # Configure console keymap
   console.keyMap = "us-acentos";
 
+  # Corrige dead keys/acentuação em apps GTK4 (ex: Ghostty) no Wayland,
+  # onde o GTK passou a depender do protocolo text-input do compositor
+  # em vez do seu compose simples embutido.
+  environment.sessionVariables = {
+    GTK_IM_MODULE = "simple";
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

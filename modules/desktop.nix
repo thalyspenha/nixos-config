@@ -27,5 +27,8 @@
     #hardware
     openrgb-with-all-plugins
 
+    #terminal
+    ghostty
+
   ];
 }
