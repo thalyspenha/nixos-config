@@ -7,6 +7,7 @@
     ./home-modules/rofi.nix
     ./home-modules/lock-idle.nix
     ./home-modules/notifications.nix
+    ./home-modules/wallpaper.nix
   ];
 
   home.username = "thalys";
