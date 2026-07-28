@@ -83,11 +83,10 @@ in
       };
 
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
-      gestures.workspace_swipe = true;
+      gesture = [ "3, horizontal, workspace" ];
 
       misc = {
         disable_hyprland_logo = true;
@@ -105,7 +104,7 @@ in
           "$mod, F, fullscreen"
           "$mod, L, exec, hyprlock"
           "$mod, P, pseudo"
-          "$mod, J, togglesplit"
+          "$mod, J, layoutmsg, togglesplit"
           "$mod, left, movefocus, l"
           "$mod, right, movefocus, r"
           "$mod, up, movefocus, u"
