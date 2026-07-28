@@ -124,6 +124,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "hm-backup";
 
     users.thalys = import ./home.nix;
   };
