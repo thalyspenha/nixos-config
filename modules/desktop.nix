@@ -4,13 +4,16 @@
   environment.systemPackages = with pkgs; [
     # Editor
     vscode
+    kdePackages.kate
 
     # API Client
     bruno
 
+    # Acesso remoto
+    kdePackages.krdc
+
     #multimedia
     vlc
-    pavucontrol
 
     #torrent
     qbittorrent
@@ -27,12 +30,5 @@
     #terminal
     ghostty
 
-    # Hyprland desktop
-    nautilus
-    grim
-    slurp
-    wl-clipboard
-    networkmanagerapplet
-    hyprpolkitagent
   ];
 }
