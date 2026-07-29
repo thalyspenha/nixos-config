@@ -38,7 +38,7 @@ in
         kb_layout = "us";
         kb_variant = "intl";
         follow_mouse = 1;
-        sensitivity = 0;
+        sensitivity = -0.7;
         touchpad.natural_scroll = true;
       };
 
@@ -110,6 +110,7 @@ in
           "$mod, up, movefocus, u"
           "$mod, down, movefocus, d"
           ", Print, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.wl-clipboard}/bin/wl-copy"
+          ", XF86AudioMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ]
         ++ (builtins.concatLists (
           builtins.genList (
@@ -127,6 +128,11 @@ in
           "$mod, 0, workspace, 10"
           "$mod SHIFT, 0, movetoworkspace, 10"
         ];
+
+      binde = [
+        ", XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ];
 
       bindm = [
         "$mod, mouse:272, movewindow"
