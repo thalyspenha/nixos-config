@@ -33,6 +33,7 @@
   ])
     k9s
     kubectl
+    android-tools
 
     pciutils
     mesa-demos

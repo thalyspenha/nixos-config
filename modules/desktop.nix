@@ -5,6 +5,7 @@
     # Editor
     vscode
     kdePackages.kate
+    pkgs.android-studio
 
     # API Client
     bruno
@@ -14,6 +15,8 @@
 
     #multimedia
     vlc
+    pkgs.picard
+    pkgs.chromaprint
 
     #torrent
     qbittorrent

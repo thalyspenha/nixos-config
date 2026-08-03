@@ -103,13 +103,10 @@
   users.users."thalys" = {
     isNormalUser = true;
     description = "Thalys";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers"];
 
     shell = pkgs.zsh;
-
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    
   };
 
   # Install firefox.
@@ -130,10 +127,8 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    android-tools
-  ];
 
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
