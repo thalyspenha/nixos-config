@@ -17,6 +17,8 @@
     vlc
     pkgs.picard
     pkgs.chromaprint
+    kooha
+    pkgs.kdePackages.kdenlive
 
     #torrent
     qbittorrent

@@ -11,6 +11,7 @@
     unzip
     wl-clipboard
     i2c-tools
+    fuse3
 
     # Utilidades
     tree
