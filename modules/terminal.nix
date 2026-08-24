@@ -11,7 +11,6 @@
     unzip
     wl-clipboard
     i2c-tools
-    fuse3
 
     # Utilidades
     tree
@@ -39,6 +38,7 @@
     pciutils
     mesa-demos
     libva-utils
+    pkgs.unrar
   ];
 
   programs.zsh.enable = true;
