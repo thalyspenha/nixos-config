@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -72,10 +72,7 @@
 
   # Corrige dead keys/acentuação em apps GTK4 (ex: Ghostty) no Wayland,
   # onde o GTK passou a depender do protocolo text-input do compositor
-  # em vez do seu compose simples embutido.
-  environment.sessionVariables = {
-    GTK_IM_MODULE = "simple";
-  };
+  # em vez do seu compose simples embutido.  
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

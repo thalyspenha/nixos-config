@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     # Editor
-    vscode
     gnome-text-editor
     pkgs.android-studio
 
@@ -29,6 +28,15 @@
 
     #terminal
     ghostty
+
+    #auth
+    ente-auth
+
+    #vpn
+    proton-vpn
+
+    #tweak
+    gnome-tweaks
 
   ];
 }

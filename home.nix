@@ -13,6 +13,14 @@
   "$HOME/.local/bin"
 ];
 
+  # Corrige dead keys/compose no NixOS: o ibus-engine-simple (ligado pelo GNOME)
+  # não acha o arquivo Compose da locale sozinho, então "  + espaço, ' + a etc.
+  # não funcionavam no Ghostty/VS Code. "include %L" força carregar o Compose
+  # da locale (pt_BR.UTF-8, que inclui o en_US completo).
+  home.file.".XCompose".text = ''
+    include "%L"
+  '';
+
   programs.home-manager.enable = true;
 
   programs.direnv = {
@@ -79,7 +87,7 @@
       "editor.formatOnSave" = true;
       "editor.minimap.enabled" = false;
       "terminal.integrated.defaultProfile.linux" = "zsh";
-      "workbench.iconTheme" = "vscode-icons";
+      "workbench.iconTheme" = "material-icon-theme";
       "workbench.colorTheme" = "Night Owl";
       "editor.codeActionsOnSave" = {
         "source.fixAll" = "always";

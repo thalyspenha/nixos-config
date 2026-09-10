@@ -1,5 +1,10 @@
 # Reverter Hyprland -> KDE Plasma Implementation Plan
 
+> **STATUS: CONCLUÍDO / HISTÓRICO (2026-07-29).** Todas as tarefas deste plano foram
+> executadas e commitadas. O estado final aqui (KDE Plasma) foi posteriormente
+> substituído por **GNOME** em 2026-09-10 (commit `0dc301b`). Documento mantido apenas
+> como registro. Estado atual: ver `docs/architecture.md`.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Remove the Hyprland desktop setup completely and restore KDE Plasma as the session, matching the pre-migration state (commit `af40e1b`).
