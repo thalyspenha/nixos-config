@@ -4,14 +4,14 @@
   environment.systemPackages = with pkgs; [
     # Editor
     vscode
-    kdePackages.kate
+    gnome-text-editor
     pkgs.android-studio
 
     # API Client
     bruno
 
     # Acesso remoto
-    kdePackages.krdc
+    remmina
 
     #multimedia
     vlc
