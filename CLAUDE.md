@@ -13,7 +13,7 @@ aplicação, banco de dados, API, filas nem testes. O repositório de trabalho f
 - **Nix Flakes** + **NixOS** canal `nixos-26.05` (`x86_64-linux`)
 - **Home Manager** `release-26.05`, integrado como módulo NixOS (não standalone)
 - Host: CPU/placa **AMD**, boot **UEFI + systemd-boot**, kernel `linuxPackages_latest`
-- Desktop atual: **GNOME** + **GDM** (Wayland/X11)
+- Desktop atual: **KDE Plasma 6** + **SDDM** (Wayland/X11)
 - Áudio **PipeWire**; **Docker** habilitado; `nix-ld` para binários não-Nix
 - Shell **zsh** + **starship** + **direnv**; editor **VS Code** (gerido via Home Manager)
 
@@ -80,6 +80,6 @@ A análise completa do projeto está em `/docs`:
 
 Docs históricos de mudança: `docs/superpowers/specs/` e `docs/superpowers/plans/`
 (descrevem o ciclo Hyprland↔KDE, já concluído; cada um traz um bloco **STATUS:
-CONCLUÍDO / HISTÓRICO** no topo — o estado atual é GNOME).
+CONCLUÍDO / HISTÓRICO** no topo — o estado atual é KDE Plasma).
 
 Comandos essenciais: ver `README.md`.

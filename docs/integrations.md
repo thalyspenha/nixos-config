@@ -29,7 +29,7 @@ não configurado explicitamente no repo, é o default do NixOS.
 | `android-tools` / `android-studio` | `android-tools`, `android-studio` | `modules/terminal.nix`, `modules/desktop.nix` | Dispositivos Android (ADB) |
 | `docker` / `lazydocker` | `virtualisation.docker`, `lazydocker` | `modules/docker.nix`, `modules/terminal.nix` | Registries de container (Docker Hub etc.) |
 | `bruno` | `bruno` | `modules/desktop.nix` | Cliente de API REST (coleções não versionadas aqui) |
-| `remmina` | `remmina` | `modules/desktop.nix` | Acesso remoto RDP/VNC/SSH |
+| `krdc` | `kdePackages.krdc` | `modules/desktop.nix` | Acesso remoto RDP/VNC/SSH |
 | `dbeaver-bin` | `dbeaver-bin` | `modules/desktop.nix` | Bancos de dados remotos |
 | `proton-vpn` | `proton-vpn` | `modules/desktop.nix` | Proton VPN (adicionado, não commitado) |
 | `openvpn` | `openvpn` | `modules/terminal.nix` | Servidores OpenVPN |

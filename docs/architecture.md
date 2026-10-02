@@ -96,10 +96,9 @@ entrada, `nixos`).
 ## Histórico arquitetural relevante
 
 O `git log` mostra várias trocas de ambiente gráfico (ver `decisions.md`):
-KDE Plasma → Hyprland (jul/2026) → revert para KDE Plasma → **GNOME** (commit `0dc301b`,
-estado atual). Os documentos em `docs/superpowers/` descrevem o ciclo Hyprland→KDE e
-estão **desatualizados** em relação ao estado atual (GNOME) — ver `testing.md` /
-verificação cruzada em `decisions.md`.
+KDE Plasma → Hyprland (jul/2026) → revert para KDE Plasma → GNOME (commit `0dc301b`) → **KDE Plasma 6** (estado atual). Os documentos em
+`docs/superpowers/` descrevem o ciclo Hyprland→KDE (histórico) — ver verificação cruzada
+em `decisions.md`.
 
 ## Itens não identificados / não aplicáveis
 

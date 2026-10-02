@@ -13,15 +13,11 @@
   "$HOME/.local/bin"
 ];
 
-  # Corrige dead keys/compose no NixOS: o ibus-engine-simple (ligado pelo GNOME)
-  # não acha o arquivo Compose da locale sozinho, então "  + espaço, ' + a etc.
-  # não funcionavam no Ghostty/VS Code. "include %L" força carregar o Compose
-  # da locale (pt_BR.UTF-8, que inclui o en_US completo).
-  home.file.".XCompose".text = ''
-    include "%L"
-  '';
-
   programs.home-manager.enable = true;
+
+  home.activation.clean-plasma-launchers = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    sed -i 's|file:///nix/store/[^/]*/share/applications/|applications:|g' ${config.home.homeDirectory}/.config/plasma-org.kde.plasma.desktop-appletsrc || true
+  '';
 
   programs.direnv = {
     enable = true;

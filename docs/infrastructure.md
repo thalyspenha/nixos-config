@@ -84,13 +84,13 @@ padrão do NixOS).
 
 ## Autenticação / Autorização
 
-- **Login local:** GDM (gráfico) + PAM padrão do NixOS. Senha do usuário definida
+- **Login local:** SDDM (gráfico) + PAM padrão do NixOS. Senha do usuário definida
   manualmente (`passwd`), não versionada.
 - **Autorização local:** modelo de grupos Unix — ver `business-rules.md`
   (`wheel` → sudo; `docker` → socket Docker; `i2c`, `adbusers`).
-- **`polkit`:** habilitado implicitamente pelo GNOME/serviços; nenhuma regra polkit
+- **`polkit`:** habilitado implicitamente pelo Plasma/serviços; nenhuma regra polkit
   customizada no repo.
-- **Secret Service / keyring:** `gnome-keyring` vem com o GNOME (não configurado
+- **Secret Service / keyring:** KWallet (`kwallet`) vem com o Plasma (não configurado
   explicitamente no repo atual).
 - **SSH / acesso remoto de rede:** desabilitado (`services.openssh` comentado).
 - Não há autenticação de aplicação (OAuth, JWT, sessões) — **Não aplicável**.

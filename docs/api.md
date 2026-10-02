@@ -24,8 +24,8 @@ NixOS: habilitado, sem portas abertas).
 |---|---|---|
 | `systemd-boot` | `configuration.nix` | Bootloader |
 | `NetworkManager` | `configuration.nix` (`networking.networkmanager.enable`) | Gestão de rede |
-| `GDM` (`services.displayManager.gdm`) | `configuration.nix` | Display manager / login gráfico |
-| GNOME (`services.desktopManager.gnome`) | `configuration.nix` | Ambiente de desktop |
+| `SDDM` (`services.displayManager.sddm`) | `configuration.nix` | Display manager / login gráfico |
+| KDE Plasma 6 (`services.desktopManager.plasma6`) | `configuration.nix` | Ambiente de desktop |
 | `xserver` (`services.xserver.enable`) | `configuration.nix` | Servidor X11 / suporte |
 | CUPS (`services.printing`) | `configuration.nix` | Impressão |
 | PipeWire (`services.pipewire`, + `alsa`, `pulse`) | `configuration.nix` | Áudio |

@@ -36,7 +36,7 @@ Principais definições:
 | Rede | `networking.hostName = "nixos"`, `networking.networkmanager.enable = true` |
 | Locale/hora | `time.timeZone = "America/Sao_Paulo"`, `i18n.defaultLocale = "pt_BR.UTF-8"` + `extraLocaleSettings` completos em pt_BR |
 | Teclado | X11: `layout = "us"`, `variant = "intl"`; console: `keyMap = "us-acentos"` |
-| Display | `services.xserver.enable`, `services.displayManager.gdm.enable`, `services.desktopManager.gnome.enable` |
+| Display | `services.xserver.enable`, `services.displayManager.sddm.enable` (+ `sddm.wayland.enable`), `services.desktopManager.plasma6.enable` |
 | Impressão | `services.printing.enable = true` (CUPS) |
 | Áudio | `services.pulseaudio.enable = false`; `security.rtkit.enable = true`; `services.pipewire` com `alsa`, `alsa.support32Bit`, `pulse` |
 | Usuário | `users.users.thalys`: `isNormalUser`, `extraGroups = [ "networkmanager" "wheel" "adbusers" ]`, `shell = pkgs.zsh` |
@@ -94,14 +94,12 @@ reinstalação ou troca de disco. Alteração ainda não commitada.)
 
 ## `modules/desktop.nix`
 
-- `environment.systemPackages` (aplicativos gráficos): `gnome-text-editor`,
-  `android-studio`, `bruno`, `remmina`, `vlc`, `picard`, `chromaprint`, `google-chrome`,
-  `dbeaver-bin`, `openrgb-with-all-plugins`, `ghostty`, `ente-auth`, `proton-vpn`,
-  `gnome-tweaks`
+- `environment.systemPackages` (aplicativos gráficos): `kdePackages.kate`,
+  `android-studio`, `bruno`, `kdePackages.krdc`, `vlc`, `picard`, `chromaprint`, `google-chrome`,
+  `dbeaver-bin`, `openrgb-with-all-plugins`, `ghostty`, `ente-auth`, `proton-vpn`
 - Comentários de categoria no arquivo: Editor / API Client / Acesso remoto / multimedia /
-  browsers / dev / hardware / terminal / auth / vpn / tweak
-- `ente-auth`, `proton-vpn`, `gnome-tweaks` foram adicionados na árvore de trabalho atual
-  (não commitado); `vscode` foi removido daqui (é gerido pelo Home Manager — ver `home.nix`).
+  browsers / dev / hardware / terminal / auth / vpn
+- `vscode` foi removido daqui (é gerido pelo Home Manager — ver `home.nix`).
 
 ## `modules/media.nix`
 

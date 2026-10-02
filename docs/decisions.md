@@ -28,14 +28,15 @@ documento de spec, ele é citado.
 - **O quê:** `configuration.nix` só agrega; cada preocupação (terminal, fonts, docker, desktop, media, graphics, hardware, nix-ld) é um arquivo.
 - **Evidência:** estrutura de `modules/` + seção "Estrutura" do `README.md`.
 
-### D5 — Ambiente de desktop: histórico de trocas, hoje **GNOME**
+### D5 — Ambiente de desktop: histórico de trocas, hoje **KDE Plasma**
 - **Linha do tempo (Git):**
   - Início: KDE Plasma (`services.desktopManager.plasma6`).
   - `cbdc1a6`..`b2f0d75` (jul/2026): migração para **Hyprland** (com specs em `docs/superpowers/`).
   - `c2254bc`, `d560a6e`, `d740421`, `7a2473a`, `ec42f2d`: **revert** Hyprland → KDE Plasma (spec: `docs/superpowers/specs/2026-07-29-kde-revert-design.md`).
   - `5b585dd` "retornado para kde".
-  - `0dc301b` "removido kde e colocado gnome" → **estado atual**: `services.displayManager.gdm.enable` + `services.desktopManager.gnome.enable`.
-- **Consequência:** os documentos em `docs/superpowers/` refletem o ciclo Hyprland↔KDE e **não** o estado GNOME atual (ver Parte 2, I1).
+  - `0dc301b` "removido kde e colocado gnome" → GNOME (`gdm` + `desktopManager.gnome`).
+  - volta ao KDE → **estado atual**: `services.displayManager.sddm.enable` (Wayland) + `services.desktopManager.plasma6.enable`.
+- **Consequência:** os documentos em `docs/superpowers/` refletem o ciclo Hyprland↔KDE (histórico; ver Parte 2, I1).
 
 ### D6 — VS Code gerido pelo Home Manager (declarativo)
 - **O quê:** `programs.vscode` em `home.nix` com extensions e `userSettings`; `vscode` foi **removido** de `modules/desktop.nix` (`git diff` atual).
@@ -86,16 +87,16 @@ e dos `docs/superpowers/*` em 2026-09-10, comparando com o que esta documentaç�
 > mantêm a descrição do problema seguida de **✅ Corrigido** com o que foi feito.
 > I5–I7 permanecem como registro (não são defeitos acionáveis).
 
-### I1 — `docs/superpowers/*` desatualizado em relação ao estado atual (GNOME)
+### I1 — `docs/superpowers/*` desatualizado (histórico)
 - **Onde:** `docs/superpowers/specs/2026-07-29-kde-revert-design.md`,
   `docs/superpowers/plans/2026-07-29-kde-revert.md`.
 - **Discrepância:** ambos descrevem o estado final como **KDE Plasma**
-  (`services.desktopManager.plasma6.enable = true`). O código atual
-  (`configuration.nix:61-62`) habilita **GNOME** (`gdm` + `desktopManager.gnome`), após o
-  commit `0dc301b`. Não há `plasma6` em lugar nenhum do código atual.
+  (`services.desktopManager.plasma6.enable = true`). Depois disso o host
+  passou por GNOME (`0dc301b`) e voltou ao **KDE Plasma 6** (estado atual, com SDDM
+  Wayland), então o estado final descrito coincide de novo com o código.
 - **Severidade:** média (docs históricos, mas podem confundir).
 - **✅ Corrigido:** adicionado um bloco **STATUS: CONCLUÍDO / HISTÓRICO** no topo de ambos
-  os arquivos, esclarecendo que o revert foi executado e que o estado atual é GNOME, com
+  os arquivos, esclarecendo que o revert foi executado e que o estado atual é KDE Plasma, com
   ponteiro para `docs/architecture.md`.
 
 ### I2 — VS Code: `iconTheme` aponta para extensão não instalada

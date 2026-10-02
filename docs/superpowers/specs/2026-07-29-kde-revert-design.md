@@ -2,9 +2,9 @@
 
 > **STATUS: CONCLUÍDO / HISTÓRICO (2026-07-29).** Este revert foi executado
 > (commits `d740421`, `7a2473a`, `ec42f2d`). O estado descrito aqui como final
-> — KDE Plasma (`services.desktopManager.plasma6`) — **não** é mais o estado
-> atual do repositório: em 2026-09-10 o desktop foi trocado para **GNOME**
-> (`services.desktopManager.gnome` + `gdm`, commit `0dc301b`). Mantido apenas
+> — KDE Plasma (`services.desktopManager.plasma6`) — foi depois trocado: em 2026-09-10 o desktop foi trocado para **GNOME**
+> (`services.desktopManager.gnome` + `gdm`, commit `0dc301b`) e depois voltou ao
+> **KDE Plasma 6** (estado atual). Mantido apenas
 > como registro do ciclo Hyprland↔KDE. Para o estado atual, ver `docs/architecture.md`.
 
 ## Contexto

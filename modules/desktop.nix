@@ -3,14 +3,14 @@
 {
   environment.systemPackages = with pkgs; [
     # Editor
-    gnome-text-editor
+    kdePackages.kate
     pkgs.android-studio
 
     # API Client
     bruno
 
     # Acesso remoto
-    remmina
+    kdePackages.krdc
 
     #multimedia
     vlc
@@ -34,9 +34,6 @@
 
     #vpn
     proton-vpn
-
-    #tweak
-    gnome-tweaks
 
   ];
 }

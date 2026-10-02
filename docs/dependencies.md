@@ -26,10 +26,10 @@ Todos vêm de `nixpkgs`. `nixpkgs.config.allowUnfree = true` permite pacotes pro
 `android-tools`, `pciutils`, `mesa-demos`, `libva-utils`, `unrar`
 
 ### GUI — `modules/desktop.nix`
-`gnome-text-editor`, `android-studio`, `bruno`, `remmina`, `vlc`, `picard`, `chromaprint`,
+`kdePackages.kate`, `android-studio`, `bruno`, `kdePackages.krdc`, `vlc`, `picard`, `chromaprint`,
 `google-chrome`, `dbeaver-bin`, `openrgb-with-all-plugins`, `ghostty`, `ente-auth`,
-`proton-vpn`, `gnome-tweaks`
-*(`ente-auth`, `proton-vpn`, `gnome-tweaks` ainda não commitados; `vscode` foi removido
+`proton-vpn`
+*(`vscode` foi removido
 daqui — passou a ser gerido pelo Home Manager)*
 
 ### Mídia — `modules/media.nix`
@@ -48,7 +48,7 @@ daqui — passou a ser gerido pelo Home Manager)*
 - Sistema: `programs.firefox`, `programs.zsh`, `programs.nix-ld`
 - Serviços que trazem pacotes: `services.pipewire`, `services.printing` (CUPS),
   `services.flatpak`, `services.hardware.openrgb`, `services.blueman`,
-  `services.displayManager.gdm`, `services.desktopManager.gnome`,
+  `services.displayManager.sddm`, `services.desktopManager.plasma6`,
   `virtualisation.docker`
 
 ## Dependências do usuário (Home Manager — `home.nix`)
