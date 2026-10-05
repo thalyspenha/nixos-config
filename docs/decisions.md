@@ -123,7 +123,7 @@ e dos `docs/superpowers/*` em 2026-09-10, comparando com o que esta documentaç�
 
 ### I4 — `README.md` assume o repo em `/etc/nixos`
 - **Onde:** `README.md` — `sudo nixos-rebuild switch --flake /etc/nixos#nixos`.
-- **Observação:** a working copy está em `/home/thalys/Projetos/Pessoal/nixos-config`.
+- **Observação:** a working copy está em `/home/thalys/Projects/Pessoal/nixos-config`.
   Para o comando funcionar como estava, o conteúdo precisa estar em `/etc/nixos`.
 - **✅ Corrigido:** `README.md` agora explicita a pré-condição e documenta a alternativa
   `--flake .#nixos` (rodando a partir do diretório do repositório). O comando original

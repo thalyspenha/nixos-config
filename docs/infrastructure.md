@@ -73,7 +73,7 @@ histórico de ajustes aqui — mas o estado **atual** do arquivo não inclui `fu
 
 O repositório precisa estar em `/etc/nixos` no host (o `--flake /etc/nixos#nixos` do
 README assume esse caminho). O caminho de desenvolvimento é
-`/home/thalys/Projetos/Pessoal/nixos-config` (working copy atual).
+`/home/thalys/Projects/Pessoal/nixos-config` (working copy atual).
 
 ## Filas / Background workers
 

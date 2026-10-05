@@ -16,6 +16,7 @@
       ./modules/media.nix
       ./modules/graphics.nix
       ./modules/hardware.nix
+      ./modules/macos-look.nix
     ];
 
   # Bootloader.
@@ -73,7 +74,13 @@
 
   # Corrige dead keys/acentuação em apps GTK4 (ex: Ghostty) no Wayland,
   # onde o GTK passou a depender do protocolo text-input do compositor
-  # em vez do seu compose simples embutido.  
+  # em vez do seu compose simples embutido. O fcitx5 atende esse protocolo
+  # no KWin (selecionar "Fcitx 5" em Configurações > Teclado > Teclado virtual).
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.waylandFrontend = true;
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

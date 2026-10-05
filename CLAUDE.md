@@ -5,7 +5,7 @@
 Configuração declarativa de **um único host NixOS pessoal** (hostname `nixos`, usuário
 `thalys`), versionada como Nix Flake. **Não é uma aplicação** — não há código de
 aplicação, banco de dados, API, filas nem testes. O repositório de trabalho fica em
-`/home/thalys/Projetos/Pessoal/nixos-config`; o host aplica a config a partir de
+`/home/thalys/Projects/Pessoal/nixos-config`; o host aplica a config a partir de
 `/etc/nixos`.
 
 ## 2. Stack

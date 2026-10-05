@@ -9,6 +9,15 @@
 
   home.stateVersion = "26.05";
 
+  # Compose: no us-intl o padrão é ' + c = ć; aqui fica como no Mac (' + c = ç).
+  # Lido pelo fcitx5 e pelo compose do X11/GTK.
+  home.file.".XCompose".text = ''
+    include "%L"
+
+    <dead_acute> <c> : "ç" ccedilla
+    <dead_acute> <C> : "Ç" Ccedilla
+  '';
+
   home.sessionPath = [
   "$HOME/.local/bin"
 ];
