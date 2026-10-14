@@ -24,12 +24,13 @@ flake.nix ──> nixosConfigurations.nixos
    ├── configuration.nix            (agregador do sistema)
    │     ├── hardware-configuration.nix   (gerado — NÃO editar manualmente)
    │     └── modules/*.nix          terminal, fonts, docker, nix-ld,
-   │                                desktop, media, graphics, hardware
+   │                                desktop, media, graphics, hardware, macos-look
    └── home-manager ──> home.nix    (usuário thalys: zsh, starship, direnv, vscode)
 ```
 
 `configuration.nix` só agrega e define sistema (boot, rede, locale, serviços, usuário).
-Cada `modules/*.nix` cobre uma área. `home.nix` tem `imports = []` (sem submódulos hoje).
+Cada `modules/*.nix` cobre uma área. O visual macOS/WhiteSur do KDE é só instalado por
+`modules/macos-look.nix`; a aplicação do tema é feita pela interface do Plasma (não declarada).
 Detalhes em `docs/`.
 
 ## 4. Regras importantes
@@ -50,7 +51,7 @@ Detalhes em `docs/`.
 
 - **Um arquivo por área** em `modules/`; adicionar novo módulo = criar `modules/x.nix` +
   incluir em `imports` de `configuration.nix`.
-- Config do usuário vai em `home.nix` (ou futuro `home-modules/`), config de sistema em
+- Config do usuário vai em `home.nix` (ou `home-modules/`), config de sistema em
   `modules/`.
 - Comentários e mensagens de commit em **português**; commits curtos, muitos usam prefixo
   Conventional Commits (`feat:`, `fix:`, `docs:`, `revert:`, `chore:`), outros são frases

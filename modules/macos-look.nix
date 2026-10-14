@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  # Visual estilo macOS (aplicar com scripts/aplicar-mac.sh)
+  # Temas estilo macOS (aplicados manualmente pelas Configurações do Sistema)
   environment.systemPackages = with pkgs; [
     #temas
     whitesur-kde
