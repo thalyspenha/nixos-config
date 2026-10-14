@@ -56,11 +56,8 @@ daqui — passou a ser gerido pelo Home Manager)*
 Programas geridos: `home-manager`, `direnv` (+ `nix-direnv`), `zsh` (+ `autosuggestion`,
 `syntaxHighlighting`), `starship`, `vscode`.
 
-### Extensões do VS Code (`programs.vscode.profiles.default.extensions`)
-De `pkgs.vscode-extensions`: `ms-dotnettools.csharp`,
-`ms-dotnettools.vscode-dotnet-runtime`, `ms-python.python`, `ms-azuretools.vscode-docker`,
-`ms-dotnettools.csdevkit`, `usernamehw.errorlens`, `esbenp.prettier-vscode`,
-`pkief.material-icon-theme`, `sdras.night-owl`
+O VS Code é instalado limpo (`programs.vscode.enable = true`); extensões são
+instaladas pela UI, não declaradas.
 
 ## Gestão de linguagens/projetos
 

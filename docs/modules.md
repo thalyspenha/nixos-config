@@ -136,18 +136,8 @@ reinstalação ou troca de disco. Alteração ainda não commitada.)
   grep = "rg"; ff = "fastfetch"; dc = "docker compose"; }`
 - `programs.starship`: `enable`, `settings` (add_newline, símbolos de `character`,
   `directory.style`, `git_branch.symbol = "🌱 "`)
-- `programs.vscode`: `enable`, `profiles.default`:
-  - **extensions:** `ms-dotnettools.csharp`, `ms-dotnettools.vscode-dotnet-runtime`,
-    `ms-python.python`, `ms-azuretools.vscode-docker`, `ms-dotnettools.csdevkit`,
-    `usernamehw.errorlens`, `esbenp.prettier-vscode`, `pkief.material-icon-theme`,
-    `sdras.night-owl`
-  - **userSettings:** fonte `FiraCode Nerd Font Mono` + ligatures, `formatOnSave`,
-    minimap desativado, terminal padrão `zsh`, `workbench.iconTheme = "material-icon-theme"`,
-    `workbench.colorTheme = "Night Owl"`, `editor.codeActionsOnSave."source.fixAll" = "always"`
-
-> Nota: `workbench.iconTheme` foi ajustado de `"vscode-icons"` para `"material-icon-theme"`
-> em 2026-09-10, para corresponder à extensão instalada `pkief.material-icon-theme`
-> (ver `decisions.md` I2).
+- `programs.vscode.enable = true` — só a instalação; extensões e settings são geridos
+  pela UI do VS Code (não declarados).
 
 ## Módulos historicamente existentes (removidos — não estão no código atual)
 

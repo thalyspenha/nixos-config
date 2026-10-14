@@ -67,34 +67,5 @@
     };
   };
 
-  programs.vscode = {
-  enable = true;
-
-  profiles.default = {
-    extensions = with pkgs.vscode-extensions; [
-      ms-dotnettools.csharp
-      ms-dotnettools.vscode-dotnet-runtime
-      ms-python.python
-      ms-azuretools.vscode-docker
-      ms-dotnettools.csdevkit
-      usernamehw.errorlens
-      esbenp.prettier-vscode
-      pkgs.vscode-extensions.pkief.material-icon-theme
-      sdras.night-owl
-    ];
-
-    userSettings = {
-      "editor.fontFamily" = "FiraCode Nerd Font Mono";
-      "editor.fontLigatures" = true;
-      "editor.formatOnSave" = true;
-      "editor.minimap.enabled" = false;
-      "terminal.integrated.defaultProfile.linux" = "zsh";
-      "workbench.iconTheme" = "material-icon-theme";
-      "workbench.colorTheme" = "Night Owl";
-      "editor.codeActionsOnSave" = {
-        "source.fixAll" = "always";
-      };
-    };
-  };
-};
+  programs.vscode.enable = true;
 }

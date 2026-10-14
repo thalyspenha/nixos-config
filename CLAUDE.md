@@ -59,7 +59,8 @@ Detalhes em `docs/`.
 - Pacotes agrupados por categoria com comentário (`# Editor`, `#browsers`, `#dev`, ...).
 - Preferir opções `programs.*` / `services.*` do NixOS a instalar pacotes soltos quando
   existir.
-- VS Code: extensões e settings declarados em `home.nix` (`programs.vscode`), não pela UI.
+- VS Code: só instalado via `home.nix` (`programs.vscode.enable`); extensões e settings são
+  configurados pela UI do VS Code (não declarados).
 - Atualizar dependências: `nix flake update` (regenera `flake.lock`).
 
 ## 6. Documentação

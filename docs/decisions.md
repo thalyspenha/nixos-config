@@ -39,8 +39,9 @@ documento de spec, ele é citado.
 - **Consequência:** os documentos em `docs/superpowers/` refletem o ciclo Hyprland↔KDE (histórico; ver Parte 2, I1).
 
 ### D6 — VS Code gerido pelo Home Manager (declarativo)
-- **O quê:** `programs.vscode` em `home.nix` com extensions e `userSettings`; `vscode` foi **removido** de `modules/desktop.nix` (`git diff` atual).
-- **Consequência:** extensões e settings versionados; o diretório de config do VS Code passa a ser (parcialmente) gerido pelo Nix.
+- **O quê:** `programs.vscode.enable = true` em `home.nix` (só a instalação); `vscode` foi **removido** de `modules/desktop.nix`.
+- **Revisão (2026-10-14):** extensões e `userSettings` deixaram de ser declarados — o VS Code é configurado pela própria UI.
+- **Consequência:** o pacote é versionado pelo Nix; extensões e settings ficam no estado do usuário (`~/.config/Code`, `~/.vscode`).
 
 ### D7 — `nix-ld` para binários dinâmicos não-Nix
 - **O quê:** `modules/nix-ld.nix` com um conjunto de libs comuns.
@@ -110,6 +111,7 @@ e dos `docs/superpowers/*` em 2026-09-10, comparando com o que esta documentaç�
 - **✅ Corrigido:** `home.nix:82` alterado para
   `"workbench.iconTheme" = "material-icon-theme";` (id do tema contribuído pela extensão
   já instalada `pkief.material-icon-theme`). Nenhuma extensão adicionada/removida.
+- **Obsoleto (2026-10-14):** settings e extensões do VS Code não são mais declarados.
 
 ### I3 — `README.md` "Estrutura" lista apenas 5 de 9 imports
 - **Onde:** `README.md`.
