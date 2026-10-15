@@ -39,6 +39,10 @@
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
+  #  KVM/virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";
 
@@ -108,7 +112,7 @@
   users.users."thalys" = {
     isNormalUser = true;
     description = "Thalys";
-    extraGroups = [ "networkmanager" "wheel" "adbusers"];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" "libvirtd"];
 
     shell = pkgs.zsh;
     
